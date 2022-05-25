@@ -36,7 +36,8 @@ static void MenuOption(int option)
             break;
         case 3: DataTypeMemorySize();
             break;
-        case 4: break;
+        case 4: calculator();
+            break;
         case 5: break;
             default: Console.WriteLine("\n\nInvalid menu choice. Try again\n\n");
             break;
@@ -90,3 +91,63 @@ static void DataTypeMemorySize()
     Console.WriteLine("double \t 8 \t\t\t" + double.MinValue + "\t" + double.MaxValue);
     Console.WriteLine("decimal \t 16 \t\t\t" + decimal.MinValue + "\t" + decimal.MaxValue);
 }
+
+// method for Q4
+static void calculator()
+{
+    Console.WriteLine("\n----- Calculator -----");
+    Console.Write("Enter in an operand: ");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Enter in an operator(+,-,*,/,%): ");
+    var op = Convert.ToString(Console.ReadLine());
+    Console.Write("Enter in another operand: ");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+
+    if (op == "+")
+    {
+        int ans = num1 + num2;
+        Console.WriteLine(num1.ToString() + "+" + num2.ToString() + "=" + ans);
+    }
+    else if (op == "-")
+    {
+        int ans = num1 - num2;
+        Console.WriteLine(num1.ToString() + "-" + num2.ToString() + "=" + ans);
+    }
+    else if (op == "*")
+    {
+        int ans = num1 * num2;
+        Console.WriteLine(num1.ToString() + "*" + num2.ToString() + "=" + ans);
+    }
+    else if (op == "/")
+    {
+        int ans = num1 / num2;
+        Console.WriteLine(num1.ToString() + "/" + num2.ToString() + "=" + ans);
+    }
+    else if (op == "%")
+    {
+        int ans = num1 % num2;
+        Console.WriteLine(num1.ToString() + "%" + num2.ToString() + "=" + ans);
+    }
+    else
+    {
+        Console.WriteLine("You must have messed up on your operator");
+    }
+
+    Console.WriteLine("Would you like to run another operation?(y/n): ");
+    var choice = Convert.ToString(Console.ReadLine());
+    if (choice == "y" || choice == "yes")
+    {
+        Console.Clear();
+        calculator();
+    }
+    else
+    {
+        Console.Clear();
+        return;
+    }
+
+
+
+
+}
+
