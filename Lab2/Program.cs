@@ -34,7 +34,8 @@ static void MenuOption(int option)
             break;
         case 2: MultiplicationTable();
             break;
-        case 3: break;
+        case 3: DataTypeMemorySize();
+            break;
         case 4: break;
         case 5: break;
             default: Console.WriteLine("\n\nInvalid menu choice. Try again\n\n");
@@ -68,4 +69,24 @@ static void MultiplicationTable()
         int ans = i * num;
         Console.WriteLine(num.ToString() + " * " + i + " = " + ans.ToString());
     }
+}
+
+// method for Q3
+static void DataTypeMemorySize()
+{
+    Console.WriteLine("\n----- Data Type Memory Size -----");
+    Console.WriteLine("=============================================");
+    Console.WriteLine("Type \t Byte(s) of memory \t Min \t Max");
+    Console.WriteLine("=============================================");
+    Console.WriteLine("sbyte \t 1 \t\t\t" + sbyte.MinValue + "\t" + sbyte.MaxValue);
+    Console.WriteLine("byte \t 1 \t\t\t" + byte.MinValue + "\t" + byte.MaxValue);
+    Console.WriteLine("short \t 2 \t\t\t" + short.MinValue + "\t" + short.MaxValue);
+    Console.WriteLine("ushort \t 2 \t\t\t" + ushort.MinValue + "\t" + ushort.MaxValue);
+    Console.WriteLine("int \t 4 \t\t\t" + int.MinValue + "\t" + int.MaxValue);
+    Console.WriteLine("uint \t 4 \t\t\t" + uint.MinValue + "\t" + uint.MaxValue);
+    Console.WriteLine("long \t 8 \t\t\t" + long.MinValue + "\t" + long.MaxValue);
+    Console.WriteLine("ulong \t 8 \t\t\t" + ulong.MinValue + "\t" + ulong.MaxValue);
+    Console.WriteLine("float \t 4 \t\t\t" + float.MinValue + "\t" + float.MaxValue);
+    Console.WriteLine("double \t 8 \t\t\t" + double.MinValue + "\t" + double.MaxValue);
+    Console.WriteLine("decimal \t 16 \t\t\t" + decimal.MinValue + "\t" + decimal.MaxValue);
 }
