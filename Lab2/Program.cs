@@ -34,6 +34,7 @@ static void MenuOption(int option)
         case 2: break;
         case 3: break;
         case 4: break;
+        case 5: break;
             default: Console.WriteLine("\n\nInvalid menu choice. Try again\n\n");
             break;
     }
