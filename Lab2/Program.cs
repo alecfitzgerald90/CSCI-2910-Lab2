@@ -30,7 +30,8 @@ static void MenuOption(int option)
 {
     switch (option)
     {
-        case 1: break;
+        case 1: AddNumbers();
+            break;
         case 2: break;
         case 3: break;
         case 4: break;
@@ -38,4 +39,16 @@ static void MenuOption(int option)
             default: Console.WriteLine("\n\nInvalid menu choice. Try again\n\n");
             break;
     }
+}
+
+// method for Q1
+static void AddNumbers()
+{
+    Console.WriteLine("----- Adding numbers -----");
+    Console.Write("Enter the first number: ");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    Console.Write("enter the second number: ");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
 }
