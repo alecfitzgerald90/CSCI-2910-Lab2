@@ -32,7 +32,8 @@ static void MenuOption(int option)
     {
         case 1: AddNumbers();
             break;
-        case 2: break;
+        case 2: MultiplicationTable();
+            break;
         case 3: break;
         case 4: break;
         case 5: break;
@@ -51,4 +52,20 @@ static void AddNumbers()
     int num2 = Convert.ToInt32(Console.ReadLine());
 
     Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
+}
+
+// method for Q2
+static void MultiplicationTable()
+{
+    Console.WriteLine("----- Multiplying numbers -----");
+    Console.Write("Enter in the number you want to multiply: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Enter in the number in which you want to stop multiplying by: ");
+    int max = Convert.ToInt32(Console.ReadLine());
+
+    for(int i = 0; i <= max; i++)
+    {
+        int ans = i * num;
+        Console.WriteLine(num.ToString() + " * " + i + " = " + ans.ToString());
+    }
 }
